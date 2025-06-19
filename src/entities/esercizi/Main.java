@@ -16,7 +16,7 @@ public class Main {
         }*/
 
         DipendenteFullTime dipFull = new DipendenteFullTime(239, 2000.33, Dipartimento.PRODUZIONE);
-        DipendentePartTime dipPartTime = new DipendentePartTime(351, 8, Dipartimento.VENDITE, 100);
+        DipendentePartTime dipPartTime = new DipendentePartTime(351, Dipartimento.VENDITE, 100);
         Dirigente dirigente = new Dirigente(2911, 3420.21, Dipartimento.AMMINISTRAZIONE);
 
         /*dipFull.calculateSalary(dipFull.stipendio);
@@ -44,6 +44,6 @@ public class Main {
         Volontario volontario2 = new Volontario("Luigi", 38, 90);
         volontario2.checkIn();
 
-
+        dipPartTime.calculateSalary(dipPartTime.stipendio);
     }
 }

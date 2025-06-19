@@ -5,10 +5,9 @@ import entities.enums.Dipartimento;
 public class DipendentePartTime extends Dipendente {
     private double hours;
 
-    public DipendentePartTime(int matricola, double stipendio, Dipartimento dipartimento, double hours) {
-        super(matricola, stipendio, dipartimento);
+    public DipendentePartTime(int matricola, Dipartimento dipartimento, double hours) {
+        super(matricola, hours * 8, dipartimento);
         this.hours = hours;
-        this.stipendio = hours * 8;
     }
 
 
@@ -16,6 +15,10 @@ public class DipendentePartTime extends Dipendente {
     public void calculateSalary(double stipendio) {
         System.out.println("Il mio salario è di " + stipendio + " euro al mese.");
 
+    }
+    
+    public void calculateSalary(double stipendio, int age) {
+        System.out.println("mi chiamo daniele " + stipendio + age);
     }
 
     public double getHours() {
